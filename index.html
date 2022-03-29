@@ -52,11 +52,11 @@
         });
 
         //pet image
-        boi = this.physics.add.image(400, 500, 'boi');
+        boi = this.physics.add.image(400, 100, 'boi');
         boi.setDisplaySize(90,90);
 
         velocity = 1;
-        boi.setVelocity(5, 3);
+        boi.setVelocity(100, 100);
         boi.setBounce(1, 1);
         boi.setCollideWorldBounds(true);
 
@@ -77,11 +77,11 @@
 
         // loop
         timedEvent = this.time.addEvent({ delay: 500, callback: onEvent, callbackScope: this, loop: true});
-        }
+    }
 
     function onEvent ()
     {
-        boi.rotation += 0.04;
+        boi.rotation += 0.05;
     }
 
     function doThing() {
